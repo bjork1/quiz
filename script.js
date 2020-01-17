@@ -27,8 +27,9 @@ document.getElementById("btn-start").addEventListener("click", function(){
         var hello = localStorage.getItem("email");
         var names = localStorage.getItem("update");
         console.log(hello);
-        $('#box').html('<p>High Scores</p>');
+        $('#box').html('<p>High Scores</p>\<form id = "again"></form>');
         $('#box').append('<p id = "hs"></p>'+ names + " " + hello);
+        $('#again').append('<input type="submit" class="btn btn-warning" value="Go to quiz">');
         
 
         
@@ -306,8 +307,8 @@ $("#something").localStorage.prepend("<br><hr>" + high);
                     $('#box').html('<p>Nice job!</p>\
             <p>Your score is </p>' + score + '<form id = "heyThere"></form>\
             <p>Enter initials here</p><input type="text" id="myText" value="">\
-            <button id = "initials" >Submit</button>');
-            $('#heyThere').append('<input type="submit" value="Play Again">');
+            <button id = "initials" type = "button" class="btn btn-info">Submit</button>');
+            $('#heyThere').append('<input class="btn btn-success" type="submit" value="Play Again">');
 
 
 
