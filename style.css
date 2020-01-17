@@ -1,16 +1,25 @@
 #high-score {
     font-size: 18px;
+  
+}
+
+#highs {
+    background-color: palegoldenrod;
+    padding: 10px;
+    font-size: 18px;
+
 }
 
 #time-remaining {
     font-size: 24px;
     float: right;
     padding: 30px;
+    background-color: lightblue;
 }
 
 #box {
     
-    background-color: grey;
+    background-color: lightyellow;
     height: 250px;
     text-align: center;
     font-size: 18px;
