@@ -25,9 +25,10 @@ document.getElementById("btn-start").addEventListener("click", function(){
     $( '#highs' ).click(function() {
         
         var hello = localStorage.getItem("email");
+        var names = localStorage.getItem("update");
         console.log(hello);
         $('#box').html('<p>High Scores</p>\
-        <p id = "hs"></p>'+ hello);
+        <p id = "hs"></p>'+ names + " " + hello);
 
         
 
@@ -302,12 +303,45 @@ $("#something").localStorage.prepend("<br><hr>" + high);
 
             
                     $('#box').html('<p>Nice job!</p>\
-            <p>Your score is </p>' + score + '<form id = "heyThere"></form>');
+            <p>Your score is </p>' + score + '<form id = "heyThere"></form>\
+            <p>Enter initials here</p><input type="text" id="myText" value="">\
+            <button id = "initials" >Submit</button>');
             $('#heyThere').append('<input type="submit" value="Play Again">');
 
 
 
             localStorage.setItem("email", score);
+           
+            jQuery(':button').click(function () {
+                this.id = "initials";
+                var variable = document.getElementById("myText").value;
+                console.log(variable);
+                localStorage.setItem("update", variable);
+
+
+                /*
+    
+                if (this.id == 'initials') {
+           
+            
+            console.log(variable);
+
+
+        };
+
+        */
+    });
+
+
+
+        
+               
+         
+           
+           
+            
+
+
 
             
             });
@@ -368,4 +402,3 @@ jQuery(':button').click(function () {
         });
 
     });
-        
