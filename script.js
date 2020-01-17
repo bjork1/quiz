@@ -167,7 +167,10 @@ document.getElementById("btn-start").addEventListener("click", function(){
 
 
             $('#box').html('<p>Nice job!</p>\
-            <p>Your score is "score"</p>'+ score);
+            <p>Your score is "score"</p>' + score + '<form id = "heyThere"></form>');
+
+
+            $('#heyThere').append('<input type="submit" value="button">');
 
            // localStorage.setItem(score);
            // var existing = localStorage.getItem('highScore');
