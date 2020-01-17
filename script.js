@@ -50,15 +50,10 @@ document.getElementById("btn-start").addEventListener("click", function(){
             count -= 1;
             timeLeft.textContent = count;
 
-            if (count === 0) {
-                alert("Out of time!");
-                //$('#box').html(initialContent);
-                //$('#btn-start').html(initialButton);
-                //count = 30;
-                //$(startTest).click(function(){} ;
-                //everything();
-                //hi;
-                $('#box').html('<p>Too bad!</p>\
+            if (count <= 0) {
+               
+                clearInterval(intervalID);
+                $('#box').html('<p>Out of time!</p>\
             <p>Your score is </p>' + score + '<form id = "fail"></form>');
                 $('#fail').append('<input type="submit" value="Try Again">');
 
@@ -94,7 +89,7 @@ document.getElementById("btn-start").addEventListener("click", function(){
         jQuery(':button').click(function () {
             if (this.id == 'stPaul') {
                 console.log('Correct!');
-                score += 1;
+                score += 10;
                 console.log(score);
                
             }
@@ -116,7 +111,7 @@ document.getElementById("btn-start").addEventListener("click", function(){
         jQuery(':button').click(function () {
             if (this.id == 'springfield') {
                 console.log('Correct!');
-                score += 1;
+                score += 10;
                 console.log(score);
             }
             else if (this.id == 'champaign' | this.id == 'chicago' | this.id == 'rockfort') {
@@ -132,10 +127,14 @@ document.getElementById("btn-start").addEventListener("click", function(){
             <button id = "manhattan" type="button" class="btn btn-warning">Manhattan</button>\
             <button id = "rochester" type="button" class="btn btn-warning">Rochester</button>');
     
+            
+            $(document.body).css("background-image", "url('https://www.telegraph.co.uk/content/dam/Travel/Destinations/North%20America/USA/New%20York/Attractions/statue-of-liberty-new-york-p.jpg?imwidth=450')");
+
+            
             jQuery(':button').click(function () {
                 if (this.id == 'newYork') {
                     console.log('Correct!');
-                score += 1;
+                score += 10;
                 console.log(score);
                 }
                 else if (this.id == 'brooklyn' | this.id == 'manhattan' | this.id == 'rochester') {
@@ -153,10 +152,14 @@ document.getElementById("btn-start").addEventListener("click", function(){
             <button id = "sanfrancisco" type="button" class="btn btn-warning">San Francisco</button>\
             <button id = "sacramento" type="button" class="btn btn-warning">Sacramento</button>');
     
+           
+            $(document.body).css("background-image", "url('http://cdn.shopify.com/s/files/1/0012/4695/3536/files/California_1_2048x.jpg?v=1548713962')");
+
+           
             jQuery(':button').click(function () {
                 if (this.id == 'la') {
                     console.log('Correct!');
-                score += 1;
+                score += 10;
                 console.log(score);
                 }
                 else if (this.id == 'sandiego' | this.id == 'sanfrancisco' | this.id == 'sacramento') {
@@ -171,10 +174,16 @@ document.getElementById("btn-start").addEventListener("click", function(){
                 <button id = "omaha" type="button" class="btn btn-warning">Omaha</button>\
                 <button id = "nc" type="button" class="btn btn-warning">Nebraska City</button>');
         
+               
+                $(document.body).css("background-image", "url('https://cdn.britannica.com/39/82639-050-2836A494/Nebraska-grasslands.jpg')");
+
+               
                 jQuery(':button').click(function () {
+
+
                     if (this.id == 'lincoln') {
                         console.log('Correct!');
-                    score += 1;
+                    score += 10;
                     console.log(score);
                     }
                     else if (this.id == 'grand' | this.id == 'omaha' | this.id == 'nc') {
@@ -182,9 +191,32 @@ document.getElementById("btn-start").addEventListener("click", function(){
                     }
             
 
+              
+                clearInterval(intervalID);
 
-            $('#box').html('<p>Nice job!</p>\
-            <p>Your score is "score"</p>' + score + '<form id = "heyThere"></form>');
+                if (count > 40 ) {
+                    score += 50;
+                }
+                else if (count <= 40 && count > 35) {
+                    score += 40;
+                }
+                else if (count <= 35 && count > 30) {
+                    score += 30;
+                }
+                else if (count <= 30 && count > 20) {
+                    score += 20;
+                }
+                else if (count <= 20 && count > 10) {
+                    score += 10;
+                }
+
+
+            
+                    $('#box').html('<p>Nice job!</p>\
+            <p>Your score is </p>' + score + '<form id = "heyThere"></form>');
+
+            
+            });
 
 
             $('#heyThere').append('<input type="submit" value="button">');
@@ -240,4 +272,3 @@ jQuery(':button').click(function () {
 
     });
         
-});
