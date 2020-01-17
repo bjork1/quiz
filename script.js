@@ -22,9 +22,17 @@ document.getElementById("btn-start").addEventListener("click", function(){
 //startTest.addEventListener("click", function () {
 
 
-    const elite = $( '#highs' ).click(function() {
+    $( '#highs' ).click(function() {
+        
+        var hello = localStorage.getItem("email");
+        console.log(hello);
         $('#box').html('<p>High Scores</p>\
-        <p id = "hs"></p>');
+        <p id = "hs"></p>'+ hello);
+
+        
+
+
+
      
 
 
@@ -274,7 +282,7 @@ document.getElementById("btn-start").addEventListener("click", function(){
 
 
  //Add to Local Storage
-                
+
 /*
                 function (){
 
@@ -296,6 +304,10 @@ $("#something").localStorage.prepend("<br><hr>" + high);
                     $('#box').html('<p>Nice job!</p>\
             <p>Your score is </p>' + score + '<form id = "heyThere"></form>');
             $('#heyThere').append('<input type="submit" value="Play Again">');
+
+
+
+            localStorage.setItem("email", score);
 
             
             });
