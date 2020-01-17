@@ -27,8 +27,9 @@ document.getElementById("btn-start").addEventListener("click", function(){
         var hello = localStorage.getItem("email");
         var names = localStorage.getItem("update");
         console.log(hello);
-        $('#box').html('<p>High Scores</p>\
-        <p id = "hs"></p>'+ names + " " + hello);
+        $('#box').html('<p>High Scores</p>');
+        $('#box').append('<p id = "hs"></p>'+ names + " " + hello);
+        
 
         
 
@@ -151,7 +152,7 @@ document.getElementById("btn-start").addEventListener("click", function(){
 
 
             document.getElementById("box").innerHTML =
-            '<p>What is the capital of New Yorks?</p>\
+            '<p>What is the capital of New York?</p>\
             <button id = "newYork" type="button" class="btn btn-warning">New York</button>\
             <button id = "brooklyn" type="button" class="btn btn-warning">Brooklyn</button>\
             <button id = "manhattan" type="button" class="btn btn-warning">Manhattan</button>\
