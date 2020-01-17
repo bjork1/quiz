@@ -1,19 +1,13 @@
 var startTest = document.getElementById("btn-start");
 var timeLeft = document.getElementById("time-remaining");
-var initialContent = $('#box').html();
-var initialButton = $('btn-start').html();
+//var initialContent = $('#box').html();
+//var initialButton = $('btn-start').html();
 
 let intervalID;
 let count = 50;
 let score = 0;
 
 
-localStorage.setItem('highScore', score);
-var high = localStorage.getItem('highScore');
-
-console.log(high);
-
-$("#hs").prepend("<br><hr>" + high);
 
 //var heyThere = $(startTest).click(function();
 
@@ -28,12 +22,19 @@ document.getElementById("btn-start").addEventListener("click", function(){
 //startTest.addEventListener("click", function () {
 
 
-    $( '#highs' ).click(function() {
+    const elite = $( '#highs' ).click(function() {
         $('#box').html('<p>High Scores</p>\
         <p id = "hs"></p>');
-    
-      });
-    
+     
+
+
+});
+
+      //var high = localStorage.getItem('high-score');
+
+      //alert(high);
+      
+      //var send = $("#something").localStorage.prepend("<br><hr>" + high);
   
     
     
@@ -69,12 +70,16 @@ document.getElementById("btn-start").addEventListener("click", function(){
 
         
 
-       
+       document.getElementById("box").innerHTML = 
+       '<p>What is the capital of Minnesota?</p>\
+        <button id = "Minneapolis" type="button" class="btn btn-warning">Minneapolis</button>\
+        <button id = "Duluth" type="button" class="btn btn-warning">Duluth</button>\
+        <button id = "Rochester" type="button" class="btn btn-warning">Rochester</button>\
+        <button id = "stPaul" type="button" class="btn btn-warning">St. Paul</button>';
 
-        
+        document.body.style.backgroundImage = "url('https://bringmethenews.com/.image/t_share/MTU0MDQ2MDMwNzkxNjQ5MDE5/minnesota-lake-itasca-state-park-near-dusk-view-of-the-mississippis-source.jpg')";
 
-
-
+/*
 
         $('#box').html('<p>What is the capital of Minnesota?</p>\
         <button id = "Minneapolis" type="button" class="btn btn-warning">Minneapolis</button>\
@@ -83,7 +88,7 @@ document.getElementById("btn-start").addEventListener("click", function(){
         <button id = "stPaul" type="button" class="btn btn-warning">St. Paul</button>');
         $(document.body).css("background-image", "url('https://bringmethenews.com/.image/t_share/MTU0MDQ2MDMwNzkxNjQ5MDE5/minnesota-lake-itasca-state-park-near-dusk-view-of-the-mississippis-source.jpg')");
 
-
+*/
     
 
         jQuery(':button').click(function () {
@@ -98,7 +103,19 @@ document.getElementById("btn-start").addEventListener("click", function(){
                 count -= 15;
             }
       
+        document.getElementById("box").innerHTML =
+        '<p>What is the capital of Illinois?</p>\
+        <button id = "springfield" type="button" class="btn btn-warning">Springfield</button>\
+        <button id = "champaign" type="button" class="btn btn-warning">Champaign</button>\
+        <button id = "chicago" type="button" class="btn btn-warning">Chicago</button>\
+        <button id = "rockfort" type="button" class="btn btn-warning">Rockfort</button>';
 
+
+
+        document.body.style.backgroundImage =  "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTDBWh-aNuW7u78YvGNWH-84UZ1C8i1yXcjyQgz2wqWh_BybSBX')";
+
+
+        /*
             
         $('#box').html('<p>What is the capital of Illinois?</p>\
         <button id = "springfield" type="button" class="btn btn-warning">Springfield</button>\
@@ -107,6 +124,11 @@ document.getElementById("btn-start").addEventListener("click", function(){
         <button id = "rockfort" type="button" class="btn btn-warning">Rockfort</button>');
 
         $(document.body).css("background-image", "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTDBWh-aNuW7u78YvGNWH-84UZ1C8i1yXcjyQgz2wqWh_BybSBX')");
+        
+
+
+        */
+
 
         jQuery(':button').click(function () {
             if (this.id == 'springfield') {
@@ -119,6 +141,18 @@ document.getElementById("btn-start").addEventListener("click", function(){
             }
 
 
+            document.getElementById("box").innerHTML =
+            '<p>What is the capital of New Yorks?</p>\
+            <button id = "newYork" type="button" class="btn btn-warning">New York</button>\
+            <button id = "brooklyn" type="button" class="btn btn-warning">Brooklyn</button>\
+            <button id = "manhattan" type="button" class="btn btn-warning">Manhattan</button>\
+            <button id = "rochester" type="button" class="btn btn-warning">Rochester</button>';
+
+
+            document.body.style.backgroundImage = "url('https://www.telegraph.co.uk/content/dam/Travel/Destinations/North%20America/USA/New%20York/Attractions/statue-of-liberty-new-york-p.jpg?imwidth=450')";
+
+
+            /*
 
 
             $('#box').html('<p>What is the capital of New Yorks?</p>\
@@ -130,7 +164,9 @@ document.getElementById("btn-start").addEventListener("click", function(){
             
             $(document.body).css("background-image", "url('https://www.telegraph.co.uk/content/dam/Travel/Destinations/North%20America/USA/New%20York/Attractions/statue-of-liberty-new-york-p.jpg?imwidth=450')");
 
+            */
             
+
             jQuery(':button').click(function () {
                 if (this.id == 'newYork') {
                     console.log('Correct!');
@@ -142,9 +178,20 @@ document.getElementById("btn-start").addEventListener("click", function(){
                 }
 
 
+            document.getElementById("box").innerHTML =
+
+            '<p>What is the capital of California?</p>\
+            <button id = "la" type="button" class="btn btn-warning">Los Angeles</button>\
+            <button id = "sandiego" type="button" class="btn btn-warning">San Diego</button>\
+            <button id = "sanfrancisco" type="button" class="btn btn-warning">San Francisco</button>\
+            <button id = "sacramento" type="button" class="btn btn-warning">Sacramento</button>';
 
 
+            document.body.style.backgroundImage = "url('http://cdn.shopify.com/s/files/1/0012/4695/3536/files/California_1_2048x.jpg?v=1548713962')";
 
+            
+
+            /*
                 
             $('#box').html('<p>What is the capital of California?</p>\
             <button id = "la" type="button" class="btn btn-warning">Los Angeles</button>\
@@ -155,6 +202,7 @@ document.getElementById("btn-start").addEventListener("click", function(){
            
             $(document.body).css("background-image", "url('http://cdn.shopify.com/s/files/1/0012/4695/3536/files/California_1_2048x.jpg?v=1548713962')");
 
+            */
            
             jQuery(':button').click(function () {
                 if (this.id == 'la') {
@@ -168,6 +216,19 @@ document.getElementById("btn-start").addEventListener("click", function(){
 
 
 
+
+                document.getElementById("box").innerHTML ='<p>What is the capital of Nebraska?</p>\
+                <button id = "grand" type="button" class="btn btn-warning">Grand Island</button>\
+                <button id = "lincoln" type="button" class="btn btn-warning">Lincoln</button>\
+                <button id = "omaha" type="button" class="btn btn-warning">Omaha</button>\
+                <button id = "nc" type="button" class="btn btn-warning">Nebraska City</button>';
+
+                document.body.style.backgroundImage = 
+                "url('https://cdn.britannica.com/39/82639-050-2836A494/Nebraska-grasslands.jpg')";
+
+
+                /*
+
                 $('#box').html('<p>What is the capital of Nebraska?</p>\
                 <button id = "grand" type="button" class="btn btn-warning">Grand Island</button>\
                 <button id = "lincoln" type="button" class="btn btn-warning">Lincoln</button>\
@@ -177,6 +238,7 @@ document.getElementById("btn-start").addEventListener("click", function(){
                
                 $(document.body).css("background-image", "url('https://cdn.britannica.com/39/82639-050-2836A494/Nebraska-grasslands.jpg')");
 
+                */
                
                 jQuery(':button').click(function () {
 
@@ -211,15 +273,38 @@ document.getElementById("btn-start").addEventListener("click", function(){
                 }
 
 
+ //Add to Local Storage
+                
+/*
+                function (){
+
+                    
+
+
+
+                }
+                
+localStorage.setItem('high-score', score);
+
+var high = localStorage.getItem('high-score');
+$("#something").localStorage.prepend("<br><hr>" + high);
+
+*/
+
+
             
                     $('#box').html('<p>Nice job!</p>\
             <p>Your score is </p>' + score + '<form id = "heyThere"></form>');
+            $('#heyThere').append('<input type="submit" value="Play Again">');
 
             
             });
 
 
-            $('#heyThere').append('<input type="submit" value="button">');
+           
+
+
+            
 
            // localStorage.setItem(score);
            // var existing = localStorage.getItem('highScore');
